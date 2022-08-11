@@ -41,9 +41,10 @@ export class LoginComponent implements OnInit {
       this.authService.UserLogin(userDetails).subscribe(data => {
         localStorage.setItem("id_token", data.access_token);
         // const expireTime = moment().
+        this.router.navigate(["/home"]);
       });
 
-      this.router.navigate(["/home"]);
+      
 
       
 

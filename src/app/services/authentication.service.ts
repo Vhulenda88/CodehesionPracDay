@@ -28,9 +28,10 @@ export class AuthenticationService {
   }
 
   UserRegister(signupBody: UserSignup){
-    const headers: HttpHeaders = new HttpHeaders({
-      'Content-Type': 'application/x-www-form-urlencoded',
-    });
+    const headers: HttpHeaders = new HttpHeaders();
+    headers.set("Content-Type","application/plain");
+    // const params: HttpParams = new HttpParams();
+    // params.set(Pa);
 
     return this.httpClient.post(api_url,signupBody,{headers})
   }

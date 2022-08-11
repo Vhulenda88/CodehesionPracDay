@@ -1,9 +1,7 @@
 mat-card{
     width: 250px;
     height: auto;
-    margin: 5%;
-    
-    
+    margin: 5%; 
 }
 
 .center{
@@ -11,7 +9,12 @@ mat-card{
 }
 
 .cardImage{
-    width: 250px;
+    width: 280px;
     height: 100px;
+}
+
+mat-card:hover{
+    width: 250px;
+    height: auto;
 }
 
