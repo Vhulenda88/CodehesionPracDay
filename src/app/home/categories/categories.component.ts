@@ -13,6 +13,7 @@ export class CategoriesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.name);
   }
 
 }

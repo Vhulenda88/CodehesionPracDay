@@ -9,13 +9,14 @@ import { MenuService } from '../services/menu.service';
 })
 export class HomeComponent implements OnInit {
 
-  categories: MenuItems[] = []; 
+  categories: MenuItems[] = [{id: 1,name: "blue"}]; 
 
   constructor(private menuService: MenuService) { }
 
   ngOnInit(): void {
     this.menuService.getMenu().subscribe(responseData =>{
-      this.categories = responseData.data;
+      console.log(responseData);
+      // this.categories = responseData.data;
     });
   }
 

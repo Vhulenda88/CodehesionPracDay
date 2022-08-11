@@ -4,8 +4,10 @@
 
 export const environment = {
   production: false,
+  menuApi_url: "https://edeaf-api-staging.azurewebsites.net",
   auth: {
     api_url: "https://edeaf-api-staging.azurewebsites.net/connect/token",
+    
     client_id:"web-dashboard",
     client_secret:"SuperSecretPassword",
     scope: "openid profile role email offline_access adminApi mobileApi",

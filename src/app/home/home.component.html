@@ -3,8 +3,8 @@
     <!--logout button at the end-->
 </mat-toolbar>
 
-<ng-component>
-    <div *ngFor="let category in categories">
+<ng-component >
+    <div *ngFor="let category of categories">
         <app-categories [name]="category.name" ></app-categories>
-    </div>
+    </div> 
 </ng-component>
