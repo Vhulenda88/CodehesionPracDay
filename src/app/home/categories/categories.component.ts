@@ -8,12 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CategoriesComponent implements OnInit {
 
   
-  @Input() name = '';
+  @Input() name!: string;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.name);
   }
 
 }

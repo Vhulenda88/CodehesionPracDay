@@ -1,0 +1,17 @@
+mat-card{
+    width: 250px;
+    height: auto;
+    margin: 5%;
+    
+    
+}
+
+.center{
+    justify-content: center;
+}
+
+.cardImage{
+    width: 250px;
+    height: 100px;
+}
+
