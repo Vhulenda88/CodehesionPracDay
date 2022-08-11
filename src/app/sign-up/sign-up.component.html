@@ -1,0 +1,36 @@
+ <div class="formCard">
+    <mat-card >
+        <img mat-card-image src="../../assets/logo.png" alt="logo" class="logo">
+        <mat-card-content class="horizontalflexbox">
+            <form #signUpForm="ngForm" (ngSubmit)="onRegister(signUpForm.value)">
+                <mat-form-field class="input">
+                    <mat-label>Name</mat-label>
+                    <input type="text" name="name" ngModel  matInput required="true">
+                </mat-form-field><br/>
+                
+                <mat-form-field class="input">
+                    <mat-label>Surname</mat-label>
+                    <input type="text" name="surname" ngModel  matInput required="true">
+                </mat-form-field><br/>
+
+                <mat-form-field class="input">
+                    <mat-label>Email</mat-label>
+                    <input type="text" name="email" ngModel  matInput required="true">
+                </mat-form-field><br/>
+
+                <div>
+                    <label>Role: </label><br>
+                    <mat-radio-group aria-label="Role" name="role" ngModel>
+                        <mat-radio-button value="Customer" >Customer</mat-radio-button><br>
+                        <mat-radio-button value="Administrator">Administrator</mat-radio-button>
+                    </mat-radio-group>
+                </div><br>
+        
+                <!--(click)= "submitForm()"-->
+
+                <button mat-raised-button color="primary" type="submit" >SignUp</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
+

@@ -1,0 +1,13 @@
+<mat-toolbar>
+    <!--logo-->
+    <img src="../../assets/logo.png" alt="Logo" class="logo">
+    <!--logout button at the end-->
+    <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+</mat-toolbar>
+
+
+<mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let category of categories">
+        <app-categories [name]="category.name" ></app-categories>
+    </mat-grid-tile> 
+</mat-grid-list>

@@ -1,0 +1,21 @@
+.formCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+} 
+
+mat-card{
+    width: 350px;
+    
+}
+
+.logo{
+  width: 50%;
+}
+
+.horizontalflexbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

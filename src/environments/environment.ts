@@ -3,8 +3,21 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  menuApi_url: "https://edeaf-api-staging.azurewebsites.net",
+  auth: {
+    api_url: "https://edeaf-api-staging.azurewebsites.net/connect/token",
+    
+    client_id:"web-dashboard",
+    client_secret:"SuperSecretPassword",
+    scope: "openid profile role email offline_access adminApi mobileApi",
+    grant_type: "password"
+
+  },
+
 };
+
+export const api_url = "https://edeaf-api-staging.azurewebsites.net/connect/token";
 
 /*
  * For easier debugging in development mode, you can import the following file

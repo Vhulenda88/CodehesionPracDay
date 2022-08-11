@@ -1,0 +1,16 @@
+.logo{
+    width: 40%;
+}
+
+mat-toolbar{
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height: 10%;
+}
+
+button{
+    position: absolute;
+    right:    0;
+    margin-right: 5%;
+}
+
