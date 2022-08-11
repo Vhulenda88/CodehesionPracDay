@@ -24,10 +24,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submitForm():void {
+  onLogin(loginForm: any):void {
     //check if the inputs have something
-    const inputUsername = this.loginForm.controls["username"].value;
-    const inputPassword = this.loginForm.controls["password"].value;
+    const inputUsername = loginForm.username;
+    const inputPassword = loginForm.password;
     if (inputUsername != null && inputPassword != null) {
       // make a request to the api
       let userDetails = new Object as UserLogin;
@@ -43,12 +43,15 @@ export class LoginComponent implements OnInit {
         // const expireTime = moment().
         this.router.navigate(["/home"]);
       });
-
       
 
       
 
     }
+  }
+
+  logout(){
+    this.authService.Logout();
   }
 
 }

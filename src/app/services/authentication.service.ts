@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { api_url, environment } from 'src/environments/environment';
 import { UserLoggedIn, UserLogin, UserSignup } from '../interfaces/authentication';
@@ -8,7 +9,7 @@ import { UserLoggedIn, UserLogin, UserSignup } from '../interfaces/authenticatio
   providedIn: 'root',
 })
 export class AuthenticationService {
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient, private router:Router) {}
 
   UserLogin(loginBody: UserLogin): Observable<UserLoggedIn> {
     const headers: HttpHeaders = new HttpHeaders({
@@ -34,5 +35,10 @@ export class AuthenticationService {
     // params.set(Pa);
 
     return this.httpClient.post(api_url,signupBody,{headers})
+  }
+
+  Logout(){
+    localStorage.removeItem("id_token");
+    this.router.navigate(["/login"]);
   }
 }

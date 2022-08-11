@@ -1,23 +1,23 @@
 
-<div>
+<div class="formCard">
     <mat-card >
-        <img mat-card-image src="../../assets/logo.png" alt="logo" class="logo">
-        <mat-card-content class="formCard">
-            <form [formGroup]="loginForm" >
+        <img mat-card-image src="../../assets/logo.png" alt="logo" class="logo"><br>
+        <mat-card-content class="horizontalflexbox" >
+            <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
                 <mat-form-field class="input">
                     <mat-label>Username</mat-label>
-                    <input type="text" formControlName="username" matInput>
+                    <input type="text" name="username" ngModel matInput>
                 </mat-form-field><br/>
         
                 <mat-form-field class="input">
                     <mat-label>Enter your password</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                    <input matInput [type]="hide ? 'password' : 'text'" name="password" ngModel>
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
                 </mat-form-field><br>
         
-                <button mat-raised-button color="primary" (click)= "submitForm()">Login</button>
+                <button mat-raised-button color="primary" type="submit">Login</button>
             </form>
         </mat-card-content>
     
