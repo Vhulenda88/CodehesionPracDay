@@ -1,1 +1,10 @@
-<p>home works!</p>
+<mat-toolbar>
+    <!--logo-->
+    <!--logout button at the end-->
+</mat-toolbar>
+
+<ng-component>
+    <div *ngFor="let category in categories">
+        <app-categories [name]="category.name" ></app-categories>
+    </div>
+</ng-component>
