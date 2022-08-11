@@ -7,15 +7,16 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-  form: FormGroup;
-  constructor(formBuilder: FormBuilder) { 
-    this.form = formBuilder.group({
-        email: new FormControl("",[Validators.required]),
-        
-      })
+  hide: boolean = true;
+
+  constructor() { 
   }
 
   ngOnInit(): void {
+  }
+
+  onRegister(result: any){
+    
   }
 
 }
