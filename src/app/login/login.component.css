@@ -1,0 +1,38 @@
+.formCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-card{
+    width: 350px;
+    height: auto;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    vertical-align:middle;
+} 
+
+
+
+
+
+
+/*source: https://material.angular.io/components/form-field/overview*/
+/* .example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  } */
+  

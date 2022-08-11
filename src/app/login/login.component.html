@@ -1,1 +1,18 @@
-<p>login works!</p>
+<mat-card  class="formCard">
+    <form [formGroup]="loginForm" >
+        <mat-form-field class="input">
+            <mat-label>Username</mat-label>
+            <input type="text" formControlName="username" matInput>
+        </mat-form-field><br/>
+
+       <mat-form-field class="input">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+       </mat-form-field><br>
+
+       <button mat-raised-button color="primary" onclick="Submit()">Login</button>
+    </form>
+</mat-card>
