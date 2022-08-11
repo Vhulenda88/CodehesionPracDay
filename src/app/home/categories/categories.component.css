@@ -14,7 +14,11 @@ mat-card{
 }
 
 mat-card:hover{
-    width: 250px;
+    width: 280px;
     height: auto;
 }
 
+.cardImage:hover{
+    width: 310px;
+    height: 130px;
+}

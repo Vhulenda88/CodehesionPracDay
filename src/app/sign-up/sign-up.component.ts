@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { UserSignup } from '../interfaces/authentication';
 import { AuthenticationService } from '../services/authentication.service';
@@ -12,7 +13,7 @@ import { AuthenticationService } from '../services/authentication.service';
 export class SignUpComponent implements OnInit {
   hide: boolean = true;
 
-  constructor(private authService : AuthenticationService,private router: Router) { 
+  constructor(private authService : AuthenticationService,private router: Router,private snackBar: MatSnackBar) { 
   }
 
   ngOnInit(): void {
@@ -37,7 +38,7 @@ export class SignUpComponent implements OnInit {
       //switch jason object to application/x-www-form-urlencoded
 
       this.authService.UserRegister(userDetails).subscribe(data => {
-        
+        this.snackBar.open("Registered", "okay");
         // const expireTime = moment().
         this.router.navigate(["/login"]);
       });
